@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "name": "shrouk",
+        "email": "shrouk22@gmail.com",
+        "password": "1234",
+        "address": "cairo-eg",
+        "cart":["skill1Shrouk", "skill2Shrouk", "skill3Shrouk"]
+    },
+    {
+        "id": 2,
+        "name": "amr",
+        "email": "amr22@gmail.com",
+        "password": "0000",
+        "address": "cairo-eg",
+        "cart":["skill1Shrouk", "skill2Shrouk", "skill3Shrouk"]
+    },
+    {
+        "id": 2,
+        "name": "amr",
+        "email": "amr22@gmail.com",
+        "password": "0000",
+        "address": "cairo-eg",
+        "cart":["skill1Shrouk", "skill2Shrouk", "skill3Shrouk"]
+    },
+    {
+        "id": 3,
+        "name": "alaa",
+        "email": "alaa33@gmail.com",
+        "password": "1110",
+        "address": "cairo-eg",
+        "cart":["skill1Shrouk", "skill2Shrouk", "skill3Shrouk"]
+    },
+    {
+        "id": 4,
+        "name": "sara",
+        "email": "sara@gmail.com",
+        "password": "7777",
+        "address": "cairo-eg",
+        "cart":["skill1Shrouk", "skill2Shrouk", "skill3Shrouk"]
+    },
+    {
+        "id": 5,
+        "name": "ahmed",
+        "email": "ahmed@gmail.com",
+        "password": "2222",
+        "address": "cairo-eg",
+        "cart":["skill1Shrouk", "skill2Shrouk", "skill3Shrouk"]
+    }
+
+]

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Log in</title>
+    
+</head>
+<body>
+        <header id="offer">
+            <h4>Get your 50% off</h4>
+        </header>
+
+    <section id="login-page">
+
+        <h2 id="formTitle" style="font-size: 40px; margin-top: 4%; text-align: center;">Log in to your <br> account</h2>
+        <form action="#" method="post" class="loginForm" validate>
+            <input type="email" name="EmailAddress" id="emailAddress" placeholder="Email Adress">
+            <input type="password" name="pass" id="password" placeholder="Password" >
+            <div>
+                <p id="errorText" style="color: red; font-size: 1vw; margin: 5px;"></p>
+                <a href="#" style="display: block; margin: 0.7%;" onclick="goRegister(event)">Register</a>
+                <input type="checkbox" id="checkBox">Remember me
+            </div>
+            <button type="submit" onclick="confirmData(event)">Log in</button>
+        </form>
+
+        <form action="#" method="post" class="registerForm" style="display: none;" novalidate >
+            <input type="text" name="userName" id="userName" placeholder="UserName" autocomplete="none" required> 
+            <input type="email" name="regEmailAddress" id="regEmailAddress" placeholder="Email Adress" required>
+            <input type="password" name="regPassword" id="regPassword" placeholder="Password" required>
+            
+            <button type="submit" onclick="saveData(event)">Submit</button>
+        </form>
+
+        
+    </section>
+
+    <script>
+        if(localStorage.getItem("email")){
+            location.replace("index.html");
+        }
+    </script>
+   
+</body>
+</html>

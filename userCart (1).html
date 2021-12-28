@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Cart-shopping</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    
+  </head>
+  <body>
+
+    <section class="style" style="background: #d9a7c7;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fffcdc, #d9a7c7);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fffcdc, #d9a7c7);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    ;
+    padding: 50px;
+    height: 607px;height: 100%;">
+
+      <div class="container" id="cartContentt">
+          <div class="row">
+              <div class="col-12 text-center py-4">
+
+                  <img src="./img/logo.svg" alt="">
+              </div>
+
+              <div class="col-md-6 col-12 my-2"  id="cartContainer">
+               
+              </div>
+
+              <div class="col-md-6 col-12 my-2">
+                  <div class="card card-shadow">
+                      <div class="card-body">
+                          <h5>order Summary</h5>
+                          <div class="row">
+                              <div class="col-6">
+                                  <p>subtotal</p>
+                                  <p>Delivery</p>
+                              </div>
+                              <div class="col-6 " style="text-align: right;">
+                                <p class="total-price" id="totallPrice">548.00</p>
+                                <p>FREE</p>
+                            </div>
+                            <hr>
+                            <div class="col-6 " >
+                               <p>Order total</p>
+                               
+                            </div>
+                            <div class="col-6 " style="text-align: right;">
+                                <p class="total-price">548.00</p>
+                                
+                            </div>
+                            <div class="col-12">
+                                <button class="btn p-3" style="width: 100%; background-color: #c9666e; color: white;font-size: 20px;" onclick="goOrder()">check to Continue</button>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+
+                <div class="card card-shadow my-2 d-none" id="orderForm">
+                    <div class="card-body">
+                        <div class="form">
+                            <form class="row g-3 needs-validation" novalidate>
+                                <div class="col-md-6">
+                                  <label for="validationCustom01" class="form-label">First name</label>
+                                  <input type="text" class="form-control" id="validationCustom01"  required>
+                                  <div class="valid-feedback">
+                                    Looks good!
+                                  </div>
+                                </div>
+                                <div class="col-md-6">
+                                  <label for="validationCustom02" class="form-label">Last name</label>
+                                  <input type="text" class="form-control" id="validationCustom02" required>
+                                  <div class="valid-feedback">
+                                    Looks good!
+                                  </div>
+                                </div>
+                             
+                                <div class="col-md-6">
+                                  <label for="validationCustom03" class="form-label">PhoneNumber</label>
+                                  <input type="text" class="form-control" id="validationCustom03" required>
+                                  <div class="invalid-feedback">
+                                    Please provide a valid city.
+                                  </div>
+                                </div>
+                                <div class="col-md-6">
+                                  <label for="validationCustom04" class="form-label">City</label>
+                                  <input type="text" class="form-control" id="validationCustom04" required>
+                                  <div class="invalid-feedback">
+                                    Please select a valid state.
+                                  </div>
+                                </div>
+                                <div class="col-md-12">
+                                  <label for="validationCustom05" class="form-label">Address</label>
+                                  <input type="text" class="form-control" id="validationCustom05" required>
+                                  <div class="invalid-feedback">
+                                    Please provide a valid phoneNumber.
+                                  </div>
+                                </div>
+                                
+                                <div class="col-12 text-center">
+                                  <button class="btn btn-primary" type="submit" style="width: 100%; background-color: #c9666e; font-size: 20px;color: white; outline: none; border: none; color: black;" onclick="showMessage()">Order</button>
+                                </div>
+                              </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+          </div>
+
+      </div>
+
+      <div class="container d-none" id="orderConfirmed">
+          <div class="row">
+            <div class="col-12 d-flex" style="height: 100vh; ">
+                <div class="card card-shadow " style="margin: auto;">
+                    <div class="card-body">
+                        <p id="card-title"></p>
+                        <p id="card-text1"></p>
+                        <p id="card-text2"></p>
+                        <p id="card-text3">Your Order Will Be Arrived Within Two Days</p>
+                        <div style="text-align: center;">
+                            <button class="btn btn-lg p-3" style="background-color: #c9666e; color: white;font-size: 20px;margin: 0 auto;" onclick="location.replace('index.html')">OK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+      </div>
+</section>
+      <script>
+                // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+                }
+                else{
+                    //console.log(";ldmslkdm");
+                    event.preventDefault();
+                    //localStorage.removeItem("cartContent");
+                    document.getElementById("cartContentt").classList.add("d-none");
+                    document.getElementById("orderConfirmed").classList.remove("d-none");
+                }
+
+                form.classList.add('was-validated')
+            }, false)
+            })
+        })()
+
+        function showMessage(){
+          var userName = document.getElementById("validationCustom01").value +" "+ document.getElementById("validationCustom02").value;
+          var address = document.getElementById("validationCustom05").value;
+          var price = document.getElementById("totallPrice").innerText;
+ 
+        document.getElementById("card-title").innerHTML = userName;
+        document.getElementById("card-text1").innerHTML = address;
+        document.getElementById("card-text2").innerHTML = "Total Price:  " + price;
+
+        var order_details = [];
+        order_details.push(userName);
+        order_details.push(address);
+        order_details.push(price); 
+        localStorage.setItem("orderDetail", order_details);
+        }
+        
+        
+
+
+      </script>
+
+
+      
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
